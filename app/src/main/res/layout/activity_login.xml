@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#008340">
     <RelativeLayout
@@ -18,31 +20,34 @@
         android:layout_marginTop="3dp"
         card_view:cardBackgroundColor="#FFFFFF"
         card_view:cardCornerRadius="35dp"
-        card_view:cardElevation="0dp" >
+        card_view:cardElevation="0dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rel2">
-<ImageView
-    android:layout_marginTop="70dp"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:background="#BCBDAD"
-    android:id="@+id/acms_img"
-    android:layout_centerHorizontal="true"
-    ></ImageView>
+            <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#BCBDAD"
+                android:id="@+id/acms_img"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/login_to_acms">
+            </ImageView>
             <TextView
                 android:layout_marginTop="30dp"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/logintext"
-                android:text="LOGIN TO ACMS"
+                android:text="@string/login_to_acms"
                 android:layout_below="@id/acms_img"
-                android:layout_centerHorizontal="true"></TextView>
+                android:layout_centerHorizontal="true">
+
+            </TextView>
             <EditText
-                android:paddingLeft="10dp"
-                android:hint="Email"
+                android:paddingStart="10dp"
+                android:hint="@string/email"
                 android:layout_marginTop="30dp"
                 android:layout_below="@+id/logintext"
                 android:layout_width="match_parent"
@@ -50,13 +55,14 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:id="@+id/edt_email"
-                android:background="@drawable/edt_style1">
-
+                android:background="@drawable/edt_style1"
+                tools:ignore="RtlSymmetry,TextFields"
+                android:autofillHints=""
+                android:inputType="text">
             </EditText>
-
             <EditText
-                android:paddingLeft="10dp"
-                android:hint="Password"
+                android:paddingStart="10dp"
+                android:hint="@string/password"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -64,7 +70,10 @@
                 android:layout_marginLeft="30dp"
                 android:id="@+id/edt_password"
                 android:background="@drawable/edt_style1"
-                android:layout_below="@+id/edt_email">
+                android:layout_below="@+id/edt_email"
+                tools:ignore="RtlSymmetry,TextFields"
+                android:autofillHints=""
+                android:inputType="text">
 
             </EditText>
             <LinearLayout
@@ -73,26 +82,27 @@
                 android:orientation="horizontal"
                 android:id="@+id/line4"
                 android:layout_below="@id/edt_password"
-                android:layout_centerHorizontal="true"
-                >
-            <TextView
+                android:layout_centerHorizontal="true">
+                <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forget Password?"
+                android:text="@string/forget_password"
                 android:layout_marginTop="10dp"
                 android:id="@+id/text_fgpass"
-                android:textSize="18dp"
-                android:layout_below="@id/edt_password"></TextView>
-            <Button
+                android:textSize="18sp"
+                    tools:ignore="HardcodedText">
+                </TextView>
+                <Button
                 android:id="@+id/btn_login"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="Login"
-                android:textSize="18dp"
+                android:text="@string/login"
+                android:textSize="18sp"
                 android:textColor="#fff"
                 android:background="@drawable/bt_style1"
                 android:layout_marginTop="15dp"
-                ></Button>
+                    tools:ignore="HardcodedText">
+                </Button>
             </LinearLayout>
             <LinearLayout
                 android:layout_marginTop="50dp"
@@ -101,28 +111,27 @@
                 android:orientation="horizontal"
                 android:id="@+id/line5"
                 android:layout_below="@id/line4"
-                android:layout_centerHorizontal="true"
-                >
+                android:layout_centerHorizontal="true">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Don't Have Account?"
+                    android:text="@string/don_t_have_account"
                     android:layout_marginTop="10dp"
                     android:id="@+id/text_dnthaccount"
-                    android:textSize="18dp"
-                   ></TextView>
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText">
+                </TextView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Signup"
+                    android:text="@string/signup"
                     android:layout_marginTop="10dp"
                     android:textColor="#008340"
                     android:id="@+id/text_sidnup"
-                    android:textSize="18dp"
-                    ></TextView>
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText">
+                </TextView>
             </LinearLayout>
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>
